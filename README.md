@@ -97,3 +97,29 @@ In this example, `main` and `feature/add-navigation` both advanced independently
 
 Never rebase commits that have already been pushed to a shared remote and that others may base work on. Rebasing rewrites history; if you change commits that others have fetched, you will force them to reconcile divergent histories. If you must change pushed history, coordinate with your team and update the remote with `git push --force-with-lease`.
 
+## Cherry-pick vs Merge
+
+- **Cherry-pick**: Use when you need only one or a few specific commits from another branch, not the full branch history. This is appropriate if a single bug fix or small feature on another branch should be applied immediately without bringing along unrelated work.
+  - Pros: selective, keeps your branch focused, avoids merging unrelated changes.
+  - Cons: duplicates commit history, can make future merges more complex if the same changes are later merged normally.
+
+- **Merge**: Use when you want to bring an entire branch into your current branch, preserving all commits and the branch relationship.
+  - Pros: keeps history intact, avoids duplicate commits.
+  - Cons: may bring in unwanted changes if the branch includes more than what you need.
+
+### When cherry-pick is appropriate
+
+- You want one specific fix from another branch without merging the whole feature branch.
+- The other branch contains unrelated commits you do not want.
+- You need a hotfix or patch in a release branch immediately.
+
+### Command example
+
+Cherry-pick a commit:
+```bash
+git checkout main
+git cherry-pick <commit-hash>
+```
+
+
+
