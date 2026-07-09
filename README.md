@@ -4,7 +4,27 @@
 - Name: Bhumika Deshmukh
 - Training Batch: 2026
 - Date: 09-Jul-2026
-- Description: A repository created for Git training and practice.
+- Description: A learning project for Git practice, with a simple web page built using HTML, CSS, and JavaScript.
+
+## Project Features
+- Basic HTML page structure with a navigation bar
+- CSS styling for sections, layout, and navigation
+- JavaScript file (`app.js`) to demonstrate dynamic content insertion
+- Practice of Git branching and commits on `feature/add-navigation`
+
+## Navigation Bar
+This project includes a simple navigation bar at the top of the page. The nav bar contains links to:
+- Home
+- About
+- Contact
+
+The navigation layout is styled in `style.css` and provides a cleaner header experience for the page.
+
+## Current File Structure
+- `index.html` — page content and navigation structure
+- `style.css` — visual styling for the page and navigation
+- `app.js` — JavaScript behavior for dynamic page content
+- `README.md` — project documentation and notes
 
 ## .gitignore Explanation
 
@@ -34,4 +54,4 @@ git rm -r --cached node_modules
 git rm -r --cached dist
 git rm -r --cached bin
 git rm -r --cached obj
-git commit -m "chore: remove ignored files from tracking"
+git commit -m "chore: remove ignored files from tracking"```
