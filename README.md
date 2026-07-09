@@ -1,5 +1,8 @@
 # Git Training Repository
 
+THIS REPOSITORY IS CREATED FOR TRAINING PURPOSE
+
+
 ## Project Details
 - Name: Bhumika Deshmukh
 - Training Batch: 2026
