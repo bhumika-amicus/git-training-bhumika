@@ -9,7 +9,47 @@ h1 { font-size: 1.8rem; margin-bottom: 8px; color: #1e3a8a; }
 h2 { font-size: 1.3rem; margin-bottom: 8px; color: #1f2937; }
 p { margin-bottom: 12px; color: #4b5563; line-height: 1.6; }
 
-.container { max-width: 800px; margin: 0 auto; }
+.container { max-width: 800px; margin: 0 auto; display: flex; gap: 20px; }
+
+.main-content { flex: 1; }
+
+.sidebar {
+    flex: 0 0 200px;
+    background: #f0f4f8;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.sidebar h3 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+    color: #1f2937;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin-bottom: 16px;
+}
+
+.sidebar ul li {
+    margin-bottom: 8px;
+}
+
+.sidebar ul a {
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.sidebar ul a:hover {
+    text-decoration: underline;
+}
+
+.sidebar p {
+    font-size: 0.9rem;
+    color: #555;
+}
 
 section {
     background: #ffffff;
