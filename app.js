@@ -24,3 +24,5 @@ document.addEventListener('DOMContentLoaded', () => {
     homeSection.appendChild(message);
   }
 });
+
+console.log("Working on a new feature");
