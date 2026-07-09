@@ -26,6 +26,7 @@ The navigation layout is styled in `style.css` and provides a cleaner header exp
 - `app.js` — JavaScript behavior for dynamic page content
 - `README.md` — project documentation and notes
 
+
 ## .gitignore Explanation
 
 ### IDE and Editor Files
@@ -55,3 +56,28 @@ git rm -r --cached dist
 git rm -r --cached bin
 git rm -r --cached obj
 git commit -m "chore: remove ignored files from tracking"```
+```
+
+
+## Merge Note: Why This Merge Was Not a Fast-Forward
+During this Git exercise, the `feature/add-navigation` branch was created from `main` and received three meaningful commits:
+- `feat: add navigation bar to project`
+- `feat: enrich homepage content with sections`
+- `style: improve page layout and section styling`
+
+
+Later, a documentation change was made directly on `main` and committed as:
+- `docs: Updating the README`
+
+Because both branches had their own new commits, the histories had diverged. That is why Git created a merge commit instead of performing a fast-forward merge.
+
+### What is a fast-forward merge?
+A fast-forward merge happens only when the target branch has not moved forward since the feature branch was created. In that case, Git can simply move the branch pointer forward to include the feature branch commits.
+
+### Why this merge was not fast-forward
+This merge was not a fast-forward because:
+1. `main` had its own commit after the branch was created.
+2. `feature/add-navigation` had its own separate commits.
+3. Git had to combine both histories into a merge commit to preserve all updates.
+
+In this example, `main` and `feature/add-navigation` both advanced independently, so Git created a merge commit instead of moving `main` forward directly.
