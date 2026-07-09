@@ -81,3 +81,19 @@ This merge was not a fast-forward because:
 3. Git had to combine both histories into a merge commit to preserve all updates.
 
 In this example, `main` and `feature/add-navigation` both advanced independently, so Git created a merge commit instead of moving `main` forward directly.
+
+
+## Rebase vs Merge — When to use which
+
+- **Rebase**: Use when you want a clean, linear history on a private branch before integrating it. Good for cleaning up commits (`git rebase -i`) and for keeping your feature branch up-to-date with the base branch (`git fetch origin && git rebase origin/main`).
+	- Pros: produces a linear history, makes bisecting and reading history simpler.
+	- Cons: rewrites commit history (dangerous for shared branches).
+
+- **Merge**: Use when you want to preserve the historical record of how branches diverged and were integrated, or when collaborating on a branch. A merge commit documents the integration point.
+	- Pros: safe for shared branches, preserves original commits and context.
+	- Cons: can create extra merge commits and a non-linear history.
+
+### The golden rule of rebasing
+
+Never rebase commits that have already been pushed to a shared remote and that others may base work on. Rebasing rewrites history; if you change commits that others have fetched, you will force them to reconcile divergent histories. If you must change pushed history, coordinate with your team and update the remote with `git push --force-with-lease`.
+
