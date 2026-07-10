@@ -1,13 +1,11 @@
 # Git Training Repository
 
-THIS REPOSITORY IS CREATED FOR TRAINING PURPOSE
-
 
 ## Project Details
-- Name: Bhumika Deshmukh
+- Name: BHUMIKA DESHMUKH
 - Training Batch: 2026
 - Date: 09-Jul-2026
-- Description: Assignment for Git practice, with a simple web page built using HTML, CSS, and JavaScript.
+- Description: Assignment for Git Assesment, with a simple web page built using HTML, CSS, and JavaScript.
 
 ## Project Features
 - Basic HTML page structure with a navigation bar
@@ -27,7 +25,7 @@ The navigation layout is styled in `style.css` and provides a cleaner header exp
 - `index.html` — page content and navigation structure
 - `style.css` — visual styling for the page and navigation
 - `app.js` — JavaScript behavior for dynamic page content
-- `README.md` — project documentation and notes
+- `README.md` — project documentation
 
 
 ## .gitignore Explanation
