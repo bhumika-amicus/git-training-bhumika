@@ -12,18 +12,17 @@ This document demonstrates two approaches for recovering from mistakes in Git: `
 
 I accidentally deleted the `style.css` file and committed the change.
 
-```bash
-git rm style.css
-git commit -m "feat: accidentally delete style.css"
-```
+<img width="752" height="257" alt="image" src="https://github.com/user-attachments/assets/234e9e57-b0c4-410d-911f-a891b047a835" />
+
 
 To safely undo this mistake, I used:
 
-```bash
-git revert a1deec9
-```
+<img width="1059" height="624" alt="image" src="https://github.com/user-attachments/assets/da118716-9641-4d26-bfd8-b8bedfd8c959" />
 
-Git created a new commit that restored the deleted file while preserving the project history.
+Git creates a new  revert commit , and the file is restored , you can see style.css came back. 
+
+<img width="1302" height="449" alt="image" src="https://github.com/user-attachments/assets/d94b856e-eedc-4f81-b915-b324425b8ddb" />
+
 
 ### When to Use git revert
 
@@ -31,13 +30,6 @@ Git created a new commit that restored the deleted file while preserving the pro
 - When working on shared branches such as `main`.
 - When other developers may already have pulled the commit.
 - When you want a clear history showing both the mistake and the fix.
-
-```bash
-$ git log --oneline
-    13c28eb (HEAD -> main) Revert "feat: accidentally delete style.css"
-    a1deec9 feat: accidentally delete style.css
-    6615462 (origin/main) docs:update readme for task 9
-```
 
 ### Benefits
 
@@ -53,44 +45,29 @@ $ git log --oneline
 
 I added a temporary change to `README.md` and committed it:
 
-```bash
-git add README.md
-git commit -m "docs: testing the reset hard"
-```
+<img width="1190" height="570" alt="image" src="https://github.com/user-attachments/assets/6e9f5617-55f0-4142-82c8-a44acbc25481" />
 
-To remove the commit, I used:
 
-```bash
-git reset --hard HEAD~1
+This was git log before :
 
-HEAD is now at 13c28eb Revert "feat: accidentally delete style.css"
-```
+<img width="1231" height="151" alt="image" src="https://github.com/user-attachments/assets/55049104-cc63-436c-b02f-77bd86238e07" />
 
-This removed the commit from the visible commit history and moved the branch back to the previous commit.
+
+Git reset hard : we can see that docs commit will be removed as its on head 
+
+<img width="1147" height="239" alt="image" src="https://github.com/user-attachments/assets/c2ce33a7-0ff6-4e64-b76e-37b119018ca4" />
+
 
 ### Recovering the Lost Commit
 
-Even though the commit disappeared from the log, Git still kept a reference to it in the reflog.
+Even though the commit disappeared from the log, Git still kept a reference to it in the reflog. which we can use to reset back to that commit.
 
-I viewed the reflog using:
+<img width="1307" height="391" alt="image" src="https://github.com/user-attachments/assets/95dd205e-c9ec-441f-8eb8-8e122b62c8bb" />
 
-```bash
-git reflog
-```
+after reset :
 
-The reflog showed:
+<img width="1239" height="121" alt="image" src="https://github.com/user-attachments/assets/11404f1c-9c02-4f7d-b450-d0e0a890dd49" />
 
-```text
-edbb3c0 HEAD@{2}: commit: docs: testing the reset hard
-```
-
-I restored the commit using:
-
-```bash
-git reset --hard edbb3c0
-```
-
-The commit was successfully recovered.
 
 ### When to Use git reset
 
