@@ -16,6 +16,11 @@ I resolved the merge conflict by accepting the incoming changes from the `featur
 * **Selection**: Selected **Accept Incoming Change** to keep the footer implementation from the feature branch.
 * **Stage**: Staged the resolved file to prepare it for the commit.
 * **Commit**: Completed the merge process by committing the changes using the default merge commit message.
+---
+
+## 📊 Screenshot of Git Log Graph Showing Merge Commit
+
+<img width="1177" height="638" alt="image" src="https://github.com/user-attachments/assets/89e69cf8-3053-498a-b540-ef6cf7fe51d3" />
 
 ---
 
@@ -25,10 +30,10 @@ I intentionally created a footer change on the `main` branch solely to generate 
 
 > **Note on Alternative Scenarios:**
 > If both branches had contained valuable changes that needed to be preserved, I would have manually edited the conflicted file. This involves reviewing the standard conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`) and manually combining the required content from both branches before saving, staging, and completing the merge.
+> For example, this is a merge conflict I got when I was trying to cherry-pick:
+> <img width="1247" height="617" alt="image" src="https://github.com/user-attachments/assets/912efdb1-c205-4d00-8c32-e1fa386ebc18" />
 
----
 
-## 📊 Screenshot of Git Log Graph Showing Merge Commit
 
-<img width="1177" height="638" alt="image" src="https://github.com/user-attachments/assets/89e69cf8-3053-498a-b540-ef6cf7fe51d3" />
+
 
