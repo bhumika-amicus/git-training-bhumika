@@ -12,16 +12,31 @@ This document demonstrates two approaches for recovering from mistakes in Git: `
 
 I accidentally deleted the `style.css` file and committed the change.
 
+&nbsp;
+
 <img width="752" height="257" alt="image" src="https://github.com/user-attachments/assets/234e9e57-b0c4-410d-911f-a891b047a835" />
+
+&nbsp;
 
 
 To safely undo this mistake, I used:
 
+&nbsp;
+
+
 <img width="1059" height="624" alt="image" src="https://github.com/user-attachments/assets/da118716-9641-4d26-bfd8-b8bedfd8c959" />
+
+
+
+&nbsp;
 
 Git creates a new  revert commit , and the file is restored , you can see style.css came back. 
 
+&nbsp;
+
 <img width="1302" height="449" alt="image" src="https://github.com/user-attachments/assets/d94b856e-eedc-4f81-b915-b324425b8ddb" />
+
+&nbsp;
 
 
 ### When to Use git revert
@@ -39,34 +54,54 @@ Git creates a new  revert commit , and the file is restored , you can see style.
 
 ---
 
+&nbsp;
+
 ## 2. Recovering with git reset --hard and git reflog
 
 ### Scenario
 
 I added a temporary change to `README.md` and committed it:
 
+&nbsp;
+
+
 <img width="1190" height="570" alt="image" src="https://github.com/user-attachments/assets/6e9f5617-55f0-4142-82c8-a44acbc25481" />
 
+&nbsp;
 
 This was git log before :
 
+&nbsp;
+
 <img width="1231" height="151" alt="image" src="https://github.com/user-attachments/assets/55049104-cc63-436c-b02f-77bd86238e07" />
 
+&nbsp;
 
 Git reset hard : we can see that docs commit will be removed as its on head 
 
+&nbsp;
+
 <img width="1147" height="239" alt="image" src="https://github.com/user-attachments/assets/c2ce33a7-0ff6-4e64-b76e-37b119018ca4" />
 
+&nbsp;
 
 ### Recovering the Lost Commit
 
 Even though the commit disappeared from the log, Git still kept a reference to it in the reflog. which we can use to reset back to that commit.
 
+&nbsp;
+
 <img width="1307" height="391" alt="image" src="https://github.com/user-attachments/assets/95dd205e-c9ec-441f-8eb8-8e122b62c8bb" />
+
+&nbsp;
 
 after reset :
 
+&nbsp;
+
 <img width="1239" height="121" alt="image" src="https://github.com/user-attachments/assets/11404f1c-9c02-4f7d-b450-d0e0a890dd49" />
+
+&nbsp;
 
 
 ### When to Use git reset
