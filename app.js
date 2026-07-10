@@ -26,4 +26,4 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 console.log ("JavaScript is working and linked properly.");
-
+console.log("Website loaded successfully.");
