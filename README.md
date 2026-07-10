@@ -60,7 +60,7 @@ git commit -m "chore: remove ignored files from tracking"```
 ```
 
 
-## Merge Note: Why This Merge Was Not a Fast-Forward
+## TASK 6: Merge Note: Why This Merge Was Not a Fast-Forward
 During this Git exercise, the `feature/add-navigation` branch was created from `main` and received three meaningful commits:
 - `feat: add navigation bar to project`
 - `feat: enrich homepage content with sections`
@@ -84,7 +84,7 @@ This merge was not a fast-forward because:
 In this example, `main` and `feature/add-navigation` both advanced independently, so Git created a merge commit instead of moving `main` forward directly.
 
 
-## Rebase vs Merge — When to use which
+## Task 8 :  Rebase vs Merge — When to use which
 
 - **Rebase**: Use when you want a clean, linear history on a private branch before integrating it. Good for cleaning up commits (`git rebase -i`) and for keeping your feature branch up-to-date with the base branch (`git fetch origin && git rebase origin/main`).
 	- Pros: produces a linear history, makes bisecting and reading history simpler.
@@ -98,7 +98,7 @@ In this example, `main` and `feature/add-navigation` both advanced independently
 
 Never rebase commits that have already been pushed to a shared remote and that others may base work on. Rebasing rewrites history; if you change commits that others have fetched, you will force them to reconcile divergent histories. If you must change pushed history, coordinate with your team and update the remote with `git push --force-with-lease`.
 
-## Cherry-pick vs Merge
+## TASK 9 : Cherry-pick vs Merge
 
 - **Cherry-pick**: Use when you need only one or a few specific commits from another branch, not the full branch history. This is appropriate if a single bug fix or small feature on another branch should be applied immediately without bringing along unrelated work.
   - Pros: selective, keeps your branch focused, avoids merging unrelated changes.
