@@ -1,10 +1,8 @@
 # Git Training Repository
 
-THIS REPOSITORY IS CREATED FOR TRAINING PURPOSE
-
 
 ## Project Details
-- Name: Bhumika Deshmukh
+- Name: BHUMIKA DESHMUKH
 - Training Batch: 2026
 - Date: 09-Jul-2026
 - Description: Assignment for Git practice, with a simple web page built using HTML, CSS, and JavaScript.
