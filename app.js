@@ -27,6 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 console.log ("JavaScript is working and linked properly.");
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 console.log("this is a test");
 >>>>>>> ff47653 (test msg)
+=======
+console.log("this is a test");
+console.log("this is for accidently missed log");
+>>>>>>> 5d05292 (oops)
