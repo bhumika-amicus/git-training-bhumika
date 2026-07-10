@@ -1,5 +1,41 @@
 ﻿# Branching Strategy
 
+ # Configuring Branch Policies
+
+Branch policies help protect important branches like `main` by controlling how changes are reviewed, tested, and merged. They help maintain code quality and prevent accidental changes from being pushed directly to the main branch.
+
+## GitHub
+
+Follow these steps to configure branch policies on the `main` branch:
+
+### Steps
+
+1. Open repository on GitHub.
+
+2. Navigate to:
+
+   ```
+   Settings → Branches
+   ```
+
+3. Under **rules**, click:
+
+   ```
+   Add branch protection rule
+   ```
+
+4. Enter the branch name pattern:
+
+   ```
+   main
+   ```
+
+5. Enable the required branch protection options.
+ <img width="1218" height="837" alt="image" src="https://github.com/user-attachments/assets/43dfddda-1219-46b5-a015-047ccab2b37f" />
+
+
+
+
 ## Strategy Chosen: Trunk-Based Development
 
 This repository follows Trunk-Based Development. The main branch is the single source of truth, and work is done on short-lived feature or hotfix branches before being integrated back into main.
