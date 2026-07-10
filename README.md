@@ -25,7 +25,7 @@ The navigation layout is styled in `style.css` and provides a cleaner header exp
 - `index.html` — page content and navigation structure
 - `style.css` — visual styling for the page and navigation
 - `app.js` — JavaScript behavior for dynamic page content
-- `README.md` — project documentation and notes
+- `README.md` — project documentation
 
 
 ## .gitignore Explanation
