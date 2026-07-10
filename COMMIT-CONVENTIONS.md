@@ -2,52 +2,61 @@
 
 ## Commit format
 
-This repository uses the following commit format:
+This repository uses a semantic commit style with the following format:
 
 ```text
 type: subject
 ```
 
-Examples:
+The prefix before the colon is a semantic type that tells the reader what kind of change was made. This makes commit history easier to scan and review.
+
+Examples from this repository:
 
 ```text
 feat: add sidebar
-fix: enhance UI alignment
+fix: enhanced UI alignment
 docs: update README
+chore:add .gitignore
 ```
 
 ## Types used
 
-The following commit types are used or recommended in this repository:
+Based on the actual commit history in this repository, the most commonly used types are:
 
-- feat: a new feature or user-visible enhancement
-- fix: a bug fix
-- docs: documentation changes
-- chore: maintenance or project setup work
+- feat: a new feature or user-facing enhancement
+- fix: a bug fix or correction
+- docs: documentation updates
+- chore: maintenance, setup, or repository housekeeping
 - refactor: code restructuring without changing behavior
 - test: test-related changes
 
-In the current history, the most common types are feat, fix, docs, and chore.
 
 ## Good vs bad commit messages from the repository history
 
 ### Good examples
 
-These messages are clear and specific:
+These messages are clear, specific, and easy to understand:
 
 - feat: add sidebar
 - fix: enhanced UI alignment
 - docs: update README
 - docs: added recovery.md file
+- feat: add login functionality
 
 ### Less helpful examples
 
-These messages are too vague or inconsistent:
+These messages are too vague, inconsistent, or harder to interpret:
 
 - WIP
 - fix
 - docs:update readme for task 9
 - chore:add .gitignore
+- feat: accidentally delete style.css
+- fix: corrected commit message and resolved conflicts
+
+### Why these are different
+
+Good messages explain the intent of the change. Less helpful messages are either too brief, inconsistent in spacing, or describe the work in a way that is hard to scan later.
 
 ## Why consistent commit messages matter
 
@@ -58,11 +67,3 @@ Consistent commit messages help teams:
 - Trace bugs and features with less effort
 - Keep pull requests and release notes clear
 - Make collaboration smoother across the team
-
-## Guidelines
-
-- Use lowercase for the type
-- Keep the subject short and descriptive
-- Use an imperative voice when possible
-- Avoid vague subjects such as "update" or "fix"
-- Do not end the subject with a period
