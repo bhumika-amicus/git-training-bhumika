@@ -24,3 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
     homeSection.appendChild(message);
   }
 });
+
+console.log ("JavaScript is working and linked properly.");
+<<<<<<< HEAD
+=======
+console.log("this is a test");
+>>>>>>> ff47653 (test msg)
