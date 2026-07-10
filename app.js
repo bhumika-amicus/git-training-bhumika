@@ -30,8 +30,13 @@ console.log ("JavaScript is working and linked properly.");
 <<<<<<< HEAD
 =======
 console.log("this is a test");
+<<<<<<< HEAD
 >>>>>>> ff47653 (test msg)
 =======
 console.log("this is a test");
 console.log("this is for accidently missed log");
 >>>>>>> 5d05292 (oops)
+=======
+console.log("this is for accidently missed log");
+console.log("fixing an issue");
+>>>>>>> 9e1b318 (fix)
