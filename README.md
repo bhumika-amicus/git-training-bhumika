@@ -5,7 +5,7 @@
 - Name: BHUMIKA DESHMUKH
 - Training Batch: 2026
 - Date: 09-Jul-2026
-- Description: Assignment for Git practice, with a simple web page built using HTML, CSS, and JavaScript.
+- Description: Assignment for Git Assesment, with a simple web page built using HTML, CSS, and JavaScript.
 
 ## Project Features
 - Basic HTML page structure with a navigation bar
